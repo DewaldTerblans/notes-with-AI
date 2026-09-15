@@ -39,19 +39,19 @@ export default function NoteCard({ note }: { note: Note }) {
         <h2 className="font-semibold">{note.title}</h2>
         <div className="flex gap-2">
           <Button
-            variant="outline"
-            size="sm"
-            onClick={() => handleSummarize()}
-            disabled={loadingSummary}
-          >
+  variant="outline"
+  size="sm"
+  onClick={() => handleSummarize()}
+  isDisabled={loadingSummary}
+>
             {loadingSummary ? "Summarizing..." : "Summarize"}
           </Button>
           <Button
-            variant="outline"
-            size="sm"
-            onClick={() => handleFlashcards()}
-            disabled={loadingFlashcards}
-          >
+  variant="outline"
+  size="sm"
+  onClick={() => handleFlashcards()}
+  isDisabled={loadingFlashcards}
+>
             {loadingFlashcards ? "Generating..." : "Flashcards"}
           </Button>
           <form action={deleteNote.bind(null, note.id)}>

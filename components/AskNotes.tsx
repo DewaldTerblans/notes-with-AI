@@ -30,7 +30,7 @@ export default function AskNotes() {
           placeholder="e.g. What did I write about React last month?"
           onKeyDown={(e) => e.key === "Enter" && handleAsk()}
         />
-        <Button onClick={handleAsk} disabled={loading}>
+        <Button onClick={() => handleAsk()} isDisabled={loading}>
           {loading ? "Thinking..." : "Ask"}
         </Button>
       </div>
